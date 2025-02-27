@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>文艺风格个人介绍</title>
+    <style>
+        body {
+            background-color: #f9f9f9;
+            color: #333;
+            font-family: 'Georgia', serif;
+            margin: 0;
+            padding: 20px;
+            line-height: 1.8;
+        }
+        h1, h2 {
+            color: #555;
+            font-family: 'Playfair Display', serif;
+            font-weight: bold;
+        }
+        a {
+            color: #6c5b7b;
+            text-decoration: none;
+            border-bottom: 1px dashed #6c5b7b;
+        }
+        a:hover {
+            color: #c06c84;
+            border-bottom: 1px solid #c06c84;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .section {
+            margin: 40px 0;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 60px;
+            font-size: 0.9em;
+            color: #888;
+        }
+        .language-switcher {
+            text-align: right;
+            margin-bottom: 20px;
+        }
+        .language-switcher button {
+            background-color: transparent;
+            color: #6c5b7b;
+            border: 1px solid #6c5b7b;
+            padding: 5px 10px;
+            cursor: pointer;
+            font-family: 'Georgia', serif;
+            margin-left: 10px;
+        }
+        .language-switcher button:hover {
+            background-color: #6c5b7b;
+            color: #fff;
+        }
+        .quote {
+            font-style: italic;
+            color: #888;
+            margin: 20px 0;
+            text-align: center;
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- 语言切换按钮 -->
+        <div class="language-switcher">
+            <button onclick="switchLanguage('zh')">中文</button>
+            <button onclick="switchLanguage('en')">English</button>
+        </div>
+
+        <!-- 中文内容 -->
+        <div id="zh-content">
+            <h1>你好，我是<span style="color: #6c5b7b;">[你的名字]</span></h1>
+            <p class="quote">“生活是一场旅行，代码是其中的风景。”</p>
+
+            <div class="section">
+                <h2>关于我</h2>
+                <p>我是一名热爱编程与艺术的开发者，喜欢用代码创造美好的事物。我的兴趣包括前端开发、设计、摄影和写作。</p>
+                <p>我相信技术与艺术的结合可以改变世界，正如我常说的：“代码是另一种形式的诗歌。”</p>
+            </div>
+
+            <div class="section">
+                <h2>我的项目</h2>
+                <ul>
+                    <li><a href="#" target="_blank">个人博客</a> - 记录我的思考与创作。</li>
+                    <li><a href="#" target="_blank">摄影集</a> - 用镜头捕捉生活的瞬间。</li>
+                    <li><a href="#" target="_blank">开源工具</a> - 为社区贡献我的力量。</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>联系我</h2>
+                <p>如果你对我的作品感兴趣，欢迎通过以下方式联系我：</p>
+                <ul>
+                    <li>📧 邮箱: <a href="mailto:your.email@example.com">your.email@example.com</a></li>
+                    <li>🐱 GitHub: <a href="https://github.com/yourusername" target="_blank">GitHub</a></li>
+                    <li>📷 Instagram: <a href="https://instagram.com/yourusername" target="_blank">Instagram</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- 英文内容 -->
+        <div id="en-content" style="display: none;">
+            <h1>Hello, I'm <span style="color: #6c5b7b;">[Your Name]</span></h1>
+            <p class="quote">“Life is a journey, and code is the scenery along the way.”</p>
+
+            <div class="section">
+                <h2>About Me</h2>
+                <p>I am a developer passionate about programming and art, and I love creating beautiful things with code. My interests include frontend development, design, photography, and writing.</p>
+                <p>I believe that the combination of technology and art can change the world, as I often say, "Code is another form of poetry."</p>
+            </div>
+
+            <div class="section">
+                <h2>My Projects</h2>
+                <ul>
+                    <li><a href="#" target="_blank">Personal Blog</a> - Documenting my thoughts and creations.</li>
+                    <li><a href="#" target="_blank">Photography Portfolio</a> - Capturing moments of life through the lens.</li>
+                    <li><a href="#" target="_blank">Open Source Tools</a> - Contributing to the community.</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>Contact Me</h2>
+                <p>If you're interested in my work, feel free to reach out:</p>
+                <ul>
+                    <li>📧 Email: <a href="mailto:your.email@example.com">your.email@example.com</a></li>
+                    <li>🐱 GitHub: <a href="https://github.com/yourusername" target="_blank">GitHub</a></li>
+                    <li>📷 Instagram: <a href="https://instagram.com/yourusername" target="_blank">Instagram</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p id="footer-text">© 2023 [你的名字]. 保留所有权利。</p>
+    </div>
+
+    <script>
+        // 语言切换函数
+        function switchLanguage(lang) {
+            const zhContent = document.getElementById('zh-content');
+            const enContent = document.getElementById('en-content');
+            const footerText = document.getElementById('footer-text');
+
+            if (lang === 'zh') {
+                zhContent.style.display = 'block';
+                enContent.style.display = 'none';
+                footerText.textContent = '© 2023 [你的名字]. 保留所有权利。';
+            } else if (lang === 'en') {
+                zhContent.style.display = 'none';
+                enContent.style.display = 'block';
+                footerText.textContent = '© 2023 [Your Name]. All rights reserved.';
+            }
+        }
+    </script>
+</body>
+</html>
