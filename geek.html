@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geek Style Personal Introduction</title>
+    <style>
+        body {
+            background-color: #000;
+            color: #00ff00;
+            font-family: 'Courier New', Courier, monospace;
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        h1, h2 {
+            color: #00ff00;
+            text-shadow: 0 0 5px #00ff00;
+        }
+        a {
+            color: #00ff00;
+            text-decoration: none;
+            border-bottom: 1px dashed #00ff00;
+        }
+        a:hover {
+            color: #00cc00;
+            border-bottom: 1px solid #00cc00;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .code-block {
+            background-color: #111;
+            padding: 15px;
+            border: 1px solid #00ff00;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+        .code-block pre {
+            margin: 0;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 0.9em;
+            color: #666;
+        }
+        .language-switcher {
+            text-align: right;
+            margin-bottom: 20px;
+        }
+        .language-switcher button {
+            background-color: #000;
+            color: #00ff00;
+            border: 1px solid #00ff00;
+            padding: 5px 10px;
+            cursor: pointer;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        .language-switcher button:hover {
+            background-color: #00ff00;
+            color: #000;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- 语言切换按钮 -->
+        <div class="language-switcher">
+            <button onclick="switchLanguage('zh')">中文</button>
+            <button onclick="switchLanguage('en')">English</button>
+        </div>
+
+        <!-- 中文内容 -->
+        <div id="zh-content">
+            <h1>欢迎来到我的极客空间</h1>
+            <p>你好，我是<span style="color: #00ff00;">[你的名字]</span>，一名热爱技术的开发者。</p>
+
+            <h2>关于我</h2>
+            <div class="code-block">
+                <pre>
+const aboutMe = {
+    name: "[你的名字]",
+    role: "全栈开发者 | 极客",
+    skills: ["JavaScript", "Python", "React", "Node.js", "Linux"],
+    hobbies: ["编程", "开源贡献", "科幻电影", "电子音乐"],
+    motto: "代码即艺术，技术改变世界。"
+};
+                </pre>
+            </div>
+
+            <h2>我的项目</h2>
+            <div class="code-block">
+                <pre>
+const projects = [
+    {
+        name: "项目1",
+        description: "一个基于React的前端项目。",
+        link: "<a href='#' target='_blank'>查看项目</a>"
+    },
+    {
+        name: "项目2",
+        description: "一个使用Node.js构建的后端API。",
+        link: "<a href='#' target='_blank'>查看项目</a>"
+    },
+    {
+        name: "项目3",
+        description: "一个开源的Linux工具。",
+        link: "<a href='#' target='_blank'>查看项目</a>"
+    }
+];
+                </pre>
+            </div>
+
+            <h2>联系我</h2>
+            <div class="code-block">
+                <pre>
+const contactInfo = {
+    email: "<a href='mailto:your.email@example.com'>your.email@example.com</a>",
+    github: "<a href='https://github.com/yourusername' target='_blank'>GitHub</a>",
+    twitter: "<a href='https://twitter.com/yourusername' target='_blank'>Twitter</a>",
+    blog: "<a href='https://yourblog.com' target='_blank'>我的博客</a>"
+};
+                </pre>
+            </div>
+        </div>
+
+        <!-- 英文内容 -->
+        <div id="en-content" style="display: none;">
+            <h1>Welcome to My Geek Space</h1>
+            <p>Hi, I'm <span style="color: #00ff00;">[Your Name]</span>, a passionate developer.</p>
+
+            <h2>About Me</h2>
+            <div class="code-block">
+                <pre>
+const aboutMe = {
+    name: "[Your Name]",
+    role: "Full Stack Developer | Geek",
+    skills: ["JavaScript", "Python", "React", "Node.js", "Linux"],
+    hobbies: ["Coding", "Open Source", "Sci-Fi Movies", "Electronic Music"],
+    motto: "Code is Art, Technology Changes the World."
+};
+                </pre>
+            </div>
+
+            <h2>My Projects</h2>
+            <div class="code-block">
+                <pre>
+const projects = [
+    {
+        name: "Project 1",
+        description: "A frontend project built with React.",
+        link: "<a href='#' target='_blank'>View Project</a>"
+    },
+    {
+        name: "Project 2",
+        description: "A backend API built with Node.js.",
+        link: "<a href='#' target='_blank'>View Project</a>"
+    },
+    {
+        name: "Project 3",
+        description: "An open-source Linux tool.",
+        link: "<a href='#' target='_blank'>View Project</a>"
+    }
+];
+                </pre>
+            </div>
+
+            <h2>Contact Me</h2>
+            <div class="code-block">
+                <pre>
+const contactInfo = {
+    email: "<a href='mailto:your.email@example.com'>your.email@example.com</a>",
+    github: "<a href='https://github.com/yourusername' target='_blank'>GitHub</a>",
+    twitter: "<a href='https://twitter.com/yourusername' target='_blank'>Twitter</a>",
+    blog: "<a href='https://yourblog.com' target='_blank'>My Blog</a>"
+};
+                </pre>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p id="footer-text">© 2023 [你的名字]. 保留所有权利。</p>
+    </div>
+
+    <script>
+        // 语言切换函数
+        function switchLanguage(lang) {
+            const zhContent = document.getElementById('zh-content');
+            const enContent = document.getElementById('en-content');
+            const footerText = document.getElementById('footer-text');
+
+            if (lang === 'zh') {
+                zhContent.style.display = 'block';
+                enContent.style.display = 'none';
+                footerText.textContent = '© 2023 [你的名字]. 保留所有权利。';
+            } else if (lang === 'en') {
+                zhContent.style.display = 'none';
+                enContent.style.display = 'block';
+                footerText.textContent = '© 2023 [Your Name]. All rights reserved.';
+            }
+        }
+    </script>
+</body>
+</html>
